@@ -7,6 +7,7 @@ from PIL import Image
 import io
 import httpx
 from openai import OpenAI
+import random
 
 # ANSI escape codes for colors
 RED = "\033[91m"
@@ -19,6 +20,10 @@ class QWenImageEdit:
 
     def __init__(self):
         pass
+
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        return random.random()
 
     @classmethod
     def INPUT_TYPES(s):
